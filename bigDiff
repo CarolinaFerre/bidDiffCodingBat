@@ -1,0 +1,51 @@
+package ejerciciosdearrays;
+
+public class diferenciaMaximoMinimo {
+	static int resta;
+	static int maximo;
+	static int minimo;
+	
+	public static int MaximoValor(int[]nums) {
+		
+		maximo=nums[0];
+		
+		for(int i=0;i<nums.length;i++) {
+			if(nums.length==0) {
+				maximo=0;
+			}else {
+				if(nums[i]>maximo) {
+					maximo=nums[i];
+				}
+			}
+		}
+		return maximo;
+	}
+	public static int MinimoValor(int[]nums) {
+		
+		minimo=nums[0];
+		
+		for(int i=0;i<nums.length;i++) {
+			if(nums.length==0) {
+				minimo=0;
+			}else {
+				if(nums[i]<minimo) {
+					minimo=nums[i];
+				}
+			}
+		}
+		return minimo;
+	}
+	public static int resultadoResta(int maximo,int minimo) {
+		resta=maximo-minimo;
+		return resta;
+	
+	}
+	
+	public static void main(String[] args) {
+		int[]nums={7, 2, 10, 9};
+		System.out.println("El valor máximo del arreglo es= "+diferenciaMaximoMinimo.MaximoValor(nums));
+		System.out.println("El valor mínimo del arreglo es= "+diferenciaMaximoMinimo.MinimoValor(nums));
+		System.out.println("El resultado de la resta entre el valor máximo y mínimo es= "+diferenciaMaximoMinimo.resultadoResta(maximo, minimo));
+	}
+
+}
